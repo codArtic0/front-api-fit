@@ -13,3 +13,20 @@
     font-size: 25px;
     color: white;
 }
+
+.logo-header {
+    display: flex;
+    height: 2rem;
+    margin-right: 10px;
+    width: 100%;
+    background-color: white;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.dir-content{
+    display: flex;
+    align-items: center;
+    margin-right: 80%;
+    padding: 10px;
+}
