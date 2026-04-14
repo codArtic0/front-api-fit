@@ -1,0 +1,11 @@
+.container-loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-loading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--verde-escuro);
+}

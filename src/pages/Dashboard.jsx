@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useUserStore } from "../store/useUserStore";
 import { useEffect } from "react";
 import Charts from '../components/Charts';
+import PageError from "./PageError";
+import Loading from "./Loading";
 
 export default function Dashboard(){
 const navigate = useNavigate()
@@ -12,9 +14,9 @@ useEffect(() => {
     fetchUser();
   }, [fetchUser]);
 
-  if (isLoading) return <div className="loading">Carregando métricas...</div>;
+  if (isLoading) return <Loading/>;
 
-  if (!user) return <div>Nenhum dado encontrado.</div>;
+  if (!user) return <PageError/>
 
   const dataCalorias = [
     { name: 'Consumidas', value: user.caloriasDoDia, fill: '#3C8B4C' },

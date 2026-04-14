@@ -1,0 +1,25 @@
+.error-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sadBear img{
+    width: 25rem;
+}
+
+.title-error{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: var(--verde-escuro);
+    font-size: 6rem;
+    margin: 0px;
+}
+
+.description{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--verde-escuro);
+    font-size: 1.5rem;
+}
