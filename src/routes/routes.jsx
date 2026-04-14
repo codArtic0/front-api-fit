@@ -3,6 +3,7 @@ import DefaultLayout from "../components/DefaultLayout";
 import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
 import RegistrarRefeicao from "../pages/RegistrarRefeicao";
+import NotFound from "../pages/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "/registrarRefeicao",
         element: <RegistrarRefeicao />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
