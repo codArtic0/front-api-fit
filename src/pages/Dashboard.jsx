@@ -1,7 +1,17 @@
+import "../styles/dashboard.css"
+
 export default function Dashboard(){
     return(
         <>
-            <h1>Dashboard</h1>
+            <div className="dashboard-container">
+                <div className="title-dashboard">
+                    <h1>DASHBOARD</h1>
+                </div>
+                <div className="button-group">
+                    <button className="button-dashboard"> Registrar Refeição </button>
+                </div>
+            </div>
+            
         </>
     )
 }

@@ -22,7 +22,7 @@ export default function Login() {
                             <img src="/FitForge.png" alt="Logo Fit Forge" />
                         </div>
                     </div>
-                    <h1 className="title">Acesse o sistema</h1>
+                    <h1 className="title-login">Acesse o sistema</h1>
                     <div className="input-box">
                         <input
                             type="number"
@@ -37,7 +37,7 @@ export default function Login() {
                         <input type="password" placeholder="Senha" className="input-label" />
                         <FaLock className="icon" />
                     </div>
-                    <button type="submit">Entrar</button>
+                    <button className = "button-login" type="submit">Entrar</button>
                 </form>
             </div>
         </div>

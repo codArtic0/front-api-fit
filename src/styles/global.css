@@ -33,3 +33,18 @@ html, body, #root {
 .main-content {
   flex: 1;
 }
+
+button:hover{
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  appearance: textfield;
+}
