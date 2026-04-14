@@ -1,0 +1,31 @@
+.nf-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container h1, h2{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--verde-escuro);
+    margin: 20px 0px ;
+
+}
+
+.text-container h1{
+    font-weight: 800;
+    font-size: 65px;
+}
+
+.text-container h2{
+    font-weight: 300;
+    font-size: 30px;
+}
+.urso img{
+    width: 40rem;
+}
+
