@@ -8,12 +8,18 @@
 .title-dashboard{
     color: var(--verde-escuro);    
     font-family: "Montserrat", sans-serif;
-    font-size: 30px;
+    font-size: 45px;
+}
+
+.title-dashboard h1{
+    margin: 20px;
 }
 
 .button-dashboard{
-    font-size: 15;
-    padding: 15px 70px ;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    padding: 15px 100px ;
     margin: 20px;
     background-color: var(--verde-claro);
     color: white;
