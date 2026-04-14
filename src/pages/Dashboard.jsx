@@ -20,22 +20,22 @@ useEffect(() => {
 
   const dataCalorias = [
     { name: 'Consumidas', value: user.caloriasDoDia, fill: '#3C8B4C' },
-    { name: 'Faltam', value: Math.max(0, user.calorias - user.caloriasDoDia), fill: '#A1CD47' },
+    { name: 'Faltam', value: Math.max(0, user.calorias - user.caloriasDoDia), fill: '#757575' },
   ];
 
   const dataProteinas = [
     { name: 'Consumidas', value: user.proteinasDoDia, fill: '#3C8B4C' },
-    { name: 'Faltam', value: Math.max(0, user.proteinas - user.proteinasDoDia), fill: '#A1CD47' },
+    { name: 'Faltam', value: Math.max(0, user.proteinas - user.proteinasDoDia), fill: '#757575' },
   ];
 
   const dataCarboidratos = [
     { name: 'Consumidas', value: user.carboidratosDoDia, fill: '#3C8B4C' },
-    { name: 'Faltam', value: Math.max(0, user.carboidratos - user.carboidratosDoDia), fill: '#A1CD47' },
+    { name: 'Faltam', value: Math.max(0, user.carboidratos - user.carboidratosDoDia), fill: '#757575' },
   ];
 
   const dataGorduras = [
     { name: 'Consumidas', value: user.gordurasDoDia, fill: '#3C8B4C' },
-    { name: 'Faltam', value: Number((Math.max(0, user.gorduras - user.gordurasDoDia)).toFixed(2)), fill: '#A1CD47' },
+    { name: 'Faltam', value: Number((Math.max(0, user.gorduras - user.gordurasDoDia)).toFixed(2)), fill: '#757575' },
   ];
 
   function handleClick() {
