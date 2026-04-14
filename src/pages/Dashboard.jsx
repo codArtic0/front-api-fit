@@ -1,13 +1,44 @@
 import "../styles/dashboard.css"
-
+import { useNavigate } from "react-router-dom";
+import { useUserStore } from "../store/useUserStore";
+import { useEffect } from "react";
 import Charts from '../components/Charts';
 
-const dataTeste = [
-  { name: 'Macros consumidos', value: 50, fill: '#3C8B4C' },
-  { name: 'Faltam', value: 50, fill: '#A1CD47' },
-];
-
 export default function Dashboard(){
+const navigate = useNavigate()
+const { user, isLoading, fetchUser } = useUserStore();
+
+useEffect(() => {
+    fetchUser();
+  }, [fetchUser]);
+
+  if (isLoading) return <div className="loading">Carregando métricas...</div>;
+
+  if (!user) return <div>Nenhum dado encontrado.</div>;
+
+  const dataCalorias = [
+    { name: 'Consumidas', value: user.caloriasDoDia, fill: '#3C8B4C' },
+    { name: 'Faltam', value: Math.max(0, user.calorias - user.caloriasDoDia), fill: '#A1CD47' },
+  ];
+
+  const dataProteinas = [
+    { name: 'Consumidas', value: user.proteinasDoDia, fill: '#3C8B4C' },
+    { name: 'Faltam', value: Math.max(0, user.proteinas - user.proteinasDoDia), fill: '#A1CD47' },
+  ];
+
+  const dataCarboidratos = [
+    { name: 'Consumidas', value: user.carboidratosDoDia, fill: '#3C8B4C' },
+    { name: 'Faltam', value: Math.max(0, user.carboidratos - user.carboidratosDoDia), fill: '#A1CD47' },
+  ];
+
+  const dataGorduras = [
+    { name: 'Consumidas', value: user.gordurasDoDia, fill: '#3C8B4C' },
+    { name: 'Faltam', value: Number((Math.max(0, user.gorduras - user.gordurasDoDia)).toFixed(2)), fill: '#A1CD47' },
+  ];
+
+  function handleClick() {
+    navigate("/registrarRefeicao")
+  }
     return(
         <>
             <div className="dashboard-container">
@@ -17,23 +48,23 @@ export default function Dashboard(){
                 <div className="charts">
                     <div className="charts-wrapper">
                         <h2 className="title-charts">CALORIAS</h2>
-                        <Charts data={dataTeste}/>
-                    </div> 
-                    <div className="charts-wrapper">
-                        <h2 className="title-charts">PROTEINAS</h2>
-                        <Charts data={dataTeste}/>
+                        <Charts data={dataCalorias}/>
                     </div>
                     <div className="charts-wrapper">
                         <h2 className="title-charts">CARBOIDRATOS</h2>
-                        <Charts data={dataTeste}/>
-                    </div> 
+                        <Charts data={dataCarboidratos}/>
+                    </div>
+                    <div className="charts-wrapper">
+                        <h2 className="title-charts">PROTEINAS</h2>
+                        <Charts data={dataProteinas}/>
+                    </div>
                     <div className="charts-wrapper">
                         <h2 className="title-charts">GORDURAS</h2>
-                        <Charts data={dataTeste}/>
-                    </div> 
+                        <Charts data={dataGorduras}/>
+                    </div>
                 </div>
                 <div className="button-group">
-                    <button className="button-dashboard"> Registrar Refeição </button>
+                    <button className="button-dashboard" onClick={handleClick}> Registrar Refeição </button>
                 </div>
             </div>
             
