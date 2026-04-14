@@ -1,0 +1,75 @@
+.refeicao-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scale: 1.1;
+}
+
+h1{
+    font-family: "montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--verde-escuro);
+}
+
+.card-refeicao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #fbfbfb;
+}
+
+.form-refeicao{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group input{
+    border: solid 1px;
+    width: 26rem;
+    height: 3rem;
+    border-radius: 8px;
+    font-family: "Montserrat",sans-serif;
+    transition: 0.6s;
+
+}
+
+input:focus{
+    padding: 0px 20px;
+}
+
+.confirmar-button{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    padding: 15px 100px ;
+    margin: 20px;
+    background-color: var(--verde-claro);
+    color: white;
+    border-radius: 8px;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--verde-claro);
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.6s
+}
+
+.confirmar-button:hover{
+    background-color: white;
+    color: var(--verde-escuro);
+    border: 1px;
+    border-style: solid;
+    border-color: var(--verde-escuro);
+}
