@@ -3,4 +3,6 @@ export const PIE_THEME = {
   outerRadius: 80,
   paddingAngle: 5,
   stroke: 'none',
+  startAngle: 90,
+  endAngle: 450,
 };
