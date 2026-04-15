@@ -1,26 +1,27 @@
-
 :root {
   --verde-escuro: #3C8B4C;
   --verde-claro: #A1CD47;
 }
 
-html, body, #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .main-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .content-area {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .app-container {
@@ -37,7 +38,7 @@ html, body, #root {
   flex: 1;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
@@ -53,9 +54,9 @@ input[type=number] {
 }
 
 .recharts-wrapper :focus {
-    outline: none !important;
+  outline: none !important;
 }
 
 .recharts-surface {
-    outline: none;
+  outline: none;
 }

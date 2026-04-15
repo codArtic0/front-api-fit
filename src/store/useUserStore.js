@@ -9,13 +9,13 @@ export const useUserStore = create((set) => ({
   fetchUser: async () => {
     set({ isLoading: true, error: null });
     try {
-        const userid = localStorage.getItem("userId")
+      const userid = localStorage.getItem("userId")
       const userData = await getUser(userid);
       set({ user: userData, isLoading: false });
     } catch (err) {
-      set({ 
-        error: err.response?.data?.error || "Erro ao carregar usuário", 
-        isLoading: false 
+      set({
+        error: err.response?.data?.error || "Erro ao carregar usuário",
+        isLoading: false
       });
     }
   },

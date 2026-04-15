@@ -9,7 +9,7 @@ export const getUser = async (id) => {
   return response.data;
 };
 
-export const registrarAlimento = async (data) =>{
+export const registrarAlimento = async (data) => {
   const response = await api.post(`/daily/registrar`, data);
   return response.data;
 };
@@ -17,9 +17,10 @@ export const registrarAlimento = async (data) =>{
 export const getManyAlimentos = async (name) => {
   try {
     const response = await api.get('/taco/getManyAlimentos', {
-      params: { 
+      params: {
         name: name
-      }})
+      }
+    })
     return response.data;
   } catch (error) {
     if (error.response && error.response.status === 404) return [];

@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.container-footer{
+.container-footer {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--verde-escuro);
 }
 
-.developer{
+.developer {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-size: 20px;

@@ -1,4 +1,4 @@
-.refeicao-container{
+.refeicao-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,14 +6,14 @@
     scale: 1.1;
 }
 
-h1{
+h1 {
     font-family: "montserrat", sans-serif;
     font-weight: 700;
     font-size: 40px;
     color: var(--verde-escuro);
 }
 
-.card-refeicao{
+.card-refeicao {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,39 +22,39 @@ h1{
     background-color: #fbfbfb;
 }
 
-.form-refeicao{
+.form-refeicao {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
 }
 
-.input-group{
+.input-group {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 10px;
 }
 
-.input-group input{
+.input-group input {
     border: solid 1px;
     width: 26rem;
     height: 3rem;
     border-radius: 8px;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
     transition: 0.6s;
 
 }
 
-input:focus{
+input:focus {
     padding: 0px 20px;
 }
 
-.confirmar-button{
+.confirmar-button {
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    padding: 15px 100px ;
+    padding: 15px 100px;
     margin: 20px;
     background-color: var(--verde-claro);
     color: white;
@@ -66,7 +66,7 @@ input:focus{
     transition: 0.6s
 }
 
-.confirmar-button:hover{
+.confirmar-button:hover {
     background-color: white;
     color: var(--verde-escuro);
     border: 1px;

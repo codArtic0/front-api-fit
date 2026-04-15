@@ -1,10 +1,10 @@
 import "../styles/notfound.css"
 
 export default function NotFound() {
-    return(
+    return (
         <div className="nf-container">
             <div className="urso">
-                <img src="/confusedBear.png" alt="Urso confuso"/>
+                <img src="/confusedBear.png" alt="Urso confuso" />
             </div>
             <div className="text-container">
                 <h1>404, página não encontrada</h1>

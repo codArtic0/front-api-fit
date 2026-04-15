@@ -1,7 +1,7 @@
 import "../styles/header.css"
 
-export default function Header(){
-    return(
+export default function Header() {
+    return (
         <>
             <div className="container-header">
                 <div className="dir-content">

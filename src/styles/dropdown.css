@@ -1,25 +1,25 @@
 /* O container principal */
 .meu-select__control {
-  border-radius: 8px !important;
-  border: 1px solid #ccc !important;
-  font-family: "montserrat", sans-serif;
+    border-radius: 8px !important;
+    border: 1px solid #ccc !important;
+    font-family: "montserrat", sans-serif;
 }
 
 .meu-select__control--is-focused {
-  border-color: var(#000) !important;
-  box-shadow: 0 0 0 1px #000 !important;
-  padding: 0px 20px;
+    border-color: var(#000) !important;
+    box-shadow: 0 0 0 1px #000 !important;
+    padding: 0px 20px;
 }
 
 .meu-select__option {
     font-family: "montserrat", sans-serif;
-  padding: 10px !important;
+    padding: 10px !important;
 }
 
 .meu-select__option:hover {
-  background-color: var(--verde-claro) !important;
+    background-color: var(--verde-claro) !important;
 }
 
 .meu-select__option--is-selected {
-  background-color: var(--verde-escuro) !important;
+    background-color: var(--verde-escuro) !important;
 }

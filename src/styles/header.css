@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.container-header{
+.container-header {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--verde-escuro);
 }
 
-.head{
+.head {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
     font-size: 25px;
@@ -24,7 +24,7 @@
     border-radius: 8px;
 }
 
-.dir-content{
+.dir-content {
     display: flex;
     align-items: center;
     margin-right: 85%;

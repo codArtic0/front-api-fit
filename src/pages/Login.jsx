@@ -37,7 +37,7 @@ export default function Login() {
                         <input type="password" placeholder="Senha" className="input-label" />
                         <FaLock className="icon" />
                     </div>
-                    <button className = "button-login" type="submit">Entrar</button>
+                    <button className="button-login" type="submit">Entrar</button>
                 </form>
             </div>
         </div>
