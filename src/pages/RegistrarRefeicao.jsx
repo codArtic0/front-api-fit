@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "../styles/refeicao.css"
-import { api } from "../services/api";
+import { registrarAlimento } from "../services/api";
 import { useNavigate } from "react-router-dom";
 
 export default function RegistrarRefeicao(){
@@ -21,7 +21,7 @@ export default function RegistrarRefeicao(){
         }
 
         console.log(data)
-        await api.post('/daily/registrar', data)
+        await registrarAlimento(data)
         navigate('/dashboard')
     }
     
