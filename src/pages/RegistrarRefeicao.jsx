@@ -2,6 +2,7 @@ import { useState } from "react"
 import "../styles/refeicao.css"
 import { registrarAlimento } from "../services/api";
 import { useNavigate } from "react-router-dom";
+import FoodDropdown from "../components/FoodDropdown";
 
 export default function RegistrarRefeicao(){
     const navigate = useNavigate()
@@ -12,7 +13,6 @@ export default function RegistrarRefeicao(){
         e.preventDefault()
         
         const id = localStorage.getItem("userId");
-        console.log(id)
         
         const data = {
             idUser: id,
@@ -20,7 +20,6 @@ export default function RegistrarRefeicao(){
             alimento: alimento
         }
 
-        console.log(data)
         await registrarAlimento(data)
         navigate('/dashboard')
     }
@@ -32,10 +31,10 @@ export default function RegistrarRefeicao(){
                     <h1>REGISTRAR REFEIÇÃO</h1>
                     <form className="form-refeicao">
                         <div className="input-group">
-                            <input type="text" placeholder="Nome do alimento" onChange={(e)=>setAlimento(e.target.value)}/>
-                            <input type="number" placeholder="Quantidade (g)" onChange={(e)=>setQtd(e.target.value)}/>
+                            <FoodDropdown onChange={setAlimento} />
+                            <input type="number" placeholder="Quantidade (g)" value={qtd} onChange={(e)=>setQtd(e.target.value)}/>
                         </div>
-                        <button className="confirmar-button" onClick={(e) => handleConfirm(e)}> Confirmar</button>
+                        <button type="submit" className="confirmar-button" onClick={(e) => handleConfirm(e)}> Confirmar</button>
                     </form>
                 </div>
              </div>
