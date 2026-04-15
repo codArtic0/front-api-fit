@@ -18,6 +18,7 @@
 
 .meu-select__option:hover {
     background-color: var(--verde-claro) !important;
+    cursor: pointer;
 }
 
 .meu-select__option--is-selected {
