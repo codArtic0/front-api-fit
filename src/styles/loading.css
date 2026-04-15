@@ -9,3 +9,15 @@
     font-weight: 300;
     color: var(--verde-escuro);
 }
+
+@media (max-width: 768px) {
+    .title-loading {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-loading {
+        font-size: 14px;
+    }
+}

@@ -23,3 +23,55 @@
     color: var(--verde-escuro);
     font-size: 1.5rem;
 }
+
+@media (max-width: 1024px) {
+    .sadBear img {
+        width: 18rem;
+    }
+
+    .title-error {
+        font-size: 4rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .error-container {
+        padding: 20px;
+    }
+
+    .sadBear img {
+        width: 15rem;
+    }
+
+    .title-error {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-container {
+        padding: 10px;
+    }
+
+    .sadBear img {
+        width: 12rem;
+    }
+
+    .title-error {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}

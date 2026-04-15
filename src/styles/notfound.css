@@ -30,3 +30,63 @@ h2 {
 .urso img {
     width: 40rem;
 }
+
+@media (max-width: 1024px) {
+    .text-container h1 {
+        font-size: 50px;
+    }
+
+    .text-container h2 {
+        font-size: 24px;
+    }
+
+    .urso img {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nf-container {
+        padding: 20px;
+    }
+
+    .text-container h1,
+    h2 {
+        margin: 15px 0px;
+    }
+
+    .text-container h1 {
+        font-size: 40px;
+    }
+
+    .text-container h2 {
+        font-size: 18px;
+    }
+
+    .urso img {
+        width: 22rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nf-container {
+        padding: 10px;
+    }
+
+    .text-container h1,
+    h2 {
+        margin: 10px 0px;
+    }
+
+    .text-container h1 {
+        font-size: 28px;
+    }
+
+    .text-container h2 {
+        font-size: 14px;
+    }
+
+    .urso img {
+        width: 15rem;
+    }
+}

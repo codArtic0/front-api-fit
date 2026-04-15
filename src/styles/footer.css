@@ -13,3 +13,33 @@
     font-size: 20px;
     color: white;
 }
+
+@media (max-width: 1024px) {
+    .developer {
+        font-size: 18px;
+    }
+
+    .container-footer {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .developer {
+        font-size: 16px;
+    }
+
+    .container-footer {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .developer {
+        font-size: 13px;
+    }
+
+    .container-footer {
+        padding: 4px;
+    }
+}

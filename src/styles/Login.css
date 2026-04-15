@@ -99,3 +99,93 @@
     height: 100%;
     object-fit: contain;
 }
+
+@media (max-width: 1024px) {
+    .card-login {
+        padding: 3rem;
+        height: 22rem;
+    }
+
+    .title-login {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-login {
+        min-height: 60vh;
+        padding: 20px;
+    }
+
+    .card-login {
+        width: 95%;
+        padding: 2rem;
+        height: auto;
+    }
+
+    .title-login {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .input-label {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .input-box {
+        margin-bottom: 15px;
+        padding: 0 12px;
+    }
+
+    .button-login {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 35%;
+        height: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-login {
+        min-height: 70vh;
+    }
+
+    .card-login {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .title-login {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .input-label {
+        font-size: 13px;
+        padding: 8px 0;
+    }
+
+    .input-box {
+        margin-bottom: 12px;
+        padding: 0 10px;
+    }
+
+    .input-box .icon {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+
+    .button-login {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 40%;
+        height: 3.5rem;
+    }
+}

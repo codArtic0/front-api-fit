@@ -60,3 +60,15 @@ input[type=number] {
 .recharts-surface {
   outline: none;
 }
+
+@media (max-width: 768px) {
+  .app-container {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    gap: 10px;
+  }
+}

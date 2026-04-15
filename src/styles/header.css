@@ -30,3 +30,58 @@
     margin-right: 85%;
     padding: 10px;
 }
+
+@media (max-width: 1024px) {
+    .head {
+        font-size: 22px;
+    }
+
+    .logo-header {
+        height: 1.8rem;
+    }
+
+    .dir-content {
+        margin-right: 80%;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-header {
+        padding: 8px 10px;
+    }
+
+    .head {
+        font-size: 18px;
+    }
+
+    .logo-header {
+        height: 1.6rem;
+        padding: 4px;
+    }
+
+    .dir-content {
+        margin-right: 75%;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-header {
+        padding: 6px 8px;
+    }
+
+    .head {
+        font-size: 16px;
+    }
+
+    .logo-header {
+        height: 1.4rem;
+        margin-right: 8px;
+    }
+
+    .dir-content {
+        margin-right: 70%;
+        padding: 4px;
+    }
+}
