@@ -3,6 +3,7 @@ import "../styles/refeicao.css"
 import { registrarAlimento } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import FoodDropdown from "../components/FoodDropdown";
+import { BiQr } from "react-icons/bi";
 
 export default function RegistrarRefeicao() {
     const navigate = useNavigate()
@@ -10,6 +11,9 @@ export default function RegistrarRefeicao() {
     const [qtd, setQtd] = useState("")
 
     async function handleConfirm(e) {
+        if (!qtd || !alimento){
+            return null;
+        }
         e.preventDefault()
 
         const id = localStorage.getItem("userId");
