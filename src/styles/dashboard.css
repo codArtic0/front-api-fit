@@ -15,6 +15,10 @@
     margin: 20px;
 }
 
+.button-group{
+    display: flex;
+}
+
 .button-dashboard, .button-zerar {
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
@@ -72,6 +76,13 @@
 
 }
 
+#calorias, #carboidratos{
+    flex: 1;
+}
+#proteinas, #gorduras{
+    flex: 2;
+}
+
 .charts-wrapper:hover {
     transform: scale(1.08);
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
@@ -88,7 +99,7 @@
         font-size: 35px;
     }
 
-    .button-dashboard {
+    .button-dashboard, .button-zerar {
         font-size: 18px;
         padding: 12px 60px;
     }
@@ -116,7 +127,7 @@
         margin: 15px;
     }
 
-    .button-dashboard {
+    .button-dashboard, .button-zerar {
         font-size: 16px;
         padding: 12px 40px;
         margin: 15px;
@@ -142,7 +153,7 @@
         margin: 10px;
     }
 
-    .button-dashboard {
+    .button-dashboard, .button-zerar {
         font-size: 14px;
         padding: 10px 25px;
         margin: 10px;
