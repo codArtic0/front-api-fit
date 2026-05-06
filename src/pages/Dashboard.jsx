@@ -2,6 +2,7 @@ import "../styles/dashboard.css"
 import { useNavigate } from "react-router-dom";
 import { useUserStore } from "../store/useUserStore";
 import { useEffect } from "react";
+import { zerarAlimentos } from "../services/api";
 import Charts from '../components/Charts';
 import PageError from "./PageError";
 import Loading from "./Loading";
@@ -41,6 +42,11 @@ export default function Dashboard() {
     function handleClick() {
         navigate("/registrarRefeicao")
     }
+
+    async function handleZerar(){
+        await zerarAlimentos(localStorage.getItem("userId"))
+        await fetchUser()
+    }
     return (
         <>
             <div className="dashboard-container">
@@ -67,6 +73,7 @@ export default function Dashboard() {
                 </div>
                 <div className="button-group">
                     <button className="button-dashboard" onClick={handleClick}> Registrar Refeição </button>
+                    <button className="button-zerar" onClick={handleZerar}> Zerar Refeições </button>
                 </div>
             </div>
 

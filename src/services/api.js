@@ -27,3 +27,16 @@ export const getManyAlimentos = async (name) => {
     throw error;
   }
 };
+
+export const zerarAlimentos = async(id) => {
+  const data = {
+    idUser: id,
+  }
+  try{
+    const response = await api.post('/daily/zerar', data)
+  }
+  catch (error) {
+    if (error.response && error.response.status === 404) return [];
+    throw error;
+  }
+}
