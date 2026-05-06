@@ -145,6 +145,9 @@
 }
 
 @media (max-width: 480px) {
+    .button-group{
+        width: 70%;
+    }
     .title-dashboard {
         font-size: 24px;
     }
