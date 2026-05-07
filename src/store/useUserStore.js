@@ -10,7 +10,8 @@ export const useUserStore = create((set) => ({
     set({ isLoading: true, error: null });
     try {
       const userid = localStorage.getItem("userId")
-      const userData = await getUser(userid);
+      const token = localStorage.getItem("token")
+      const userData = await getUser(userid, token);
       set({ user: userData, isLoading: false });
     } catch (err) {
       set({

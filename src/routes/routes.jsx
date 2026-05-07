@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
 import RegistrarRefeicao from "../pages/RegistrarRefeicao";
 import NotFound from "../pages/NotFound";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 export const router = createBrowserRouter([
   {
@@ -20,11 +21,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: <ProtectedRoute><Dashboard /></ProtectedRoute>,
       },
       {
         path: "/registrarRefeicao",
-        element: <RegistrarRefeicao />,
+        element: <ProtectedRoute><RegistrarRefeicao /></ProtectedRoute>,
       },
       {
         path: "*",

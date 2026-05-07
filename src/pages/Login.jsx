@@ -2,15 +2,37 @@ import "../styles/login.css"
 import { FaUser, FaLock } from "react-icons/fa"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import { loginUser } from "../services/api"
 
 export default function Login() {
     const navigate = useNavigate()
-    const [id, setId] = useState(() => localStorage.getItem("userId") || "")
+    const [id, setId] = useState("")
+    const [senha, setSenha] = useState("")
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState("")
 
-    function handleLogin(event) {
+    async function handleLogin(event) {
         event.preventDefault()
-        localStorage.setItem("userId", id)
-        navigate("/dashboard")
+        setError("")
+        setLoading(true)
+
+        if (!id || !senha){
+            setError("Preencha ID e Senha")
+            setLoading(false)
+            return
+        }
+
+        try {
+            const response = await loginUser(id, senha)
+            localStorage.setItem("userId", id)
+            localStorage.setItem("userSenha", senha)
+            localStorage.setItem("token", response.token)
+            navigate("/dashboard")
+        } catch (err) {
+            setError(err.response?.data?.error || "Erro ao fazer login")
+        } finally {
+            setLoading(false)
+        }
     }
 
     return (
@@ -23,6 +45,7 @@ export default function Login() {
                         </div>
                     </div>
                     <h1 className="title-login">Acesse o sistema</h1>
+                    {error && <div style={{color: '#ff6b6b', marginBottom: '10px', textAlign: 'center'}}>{error}</div>}
                     <div className="input-box">
                         <input
                             type="number"
@@ -34,10 +57,18 @@ export default function Login() {
                         <FaUser className="icon" />
                     </div>
                     <div className="input-box">
-                        <input type="password" placeholder="Senha" className="input-label" />
+                        <input type="password"
+                        placeholder="Senha"
+                        className="input-label"
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
+                        />
+                        
                         <FaLock className="icon" />
                     </div>
-                    <button className="button-login" type="submit">Entrar</button>
+                    <button className="button-login" type="submit" disabled={loading}>
+                        {loading ? "Entrando..." : "Entrar"}
+                    </button>
                 </form>
             </div>
         </div>
