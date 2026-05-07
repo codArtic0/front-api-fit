@@ -2,17 +2,30 @@ import "../styles/dropdown.css"
 
 import AsyncSelect from "react-select/async";
 import { getManyAlimentos } from "../services/api";
+import { useRef } from "react";
 
 export default function FoodDropdown({ onChange }) {
+    const abortControllerRef = useRef(null);
+    const timerRef = useRef(null);
 
     const loadOptions = (inputValue, callback) => {
         if (inputValue.length < 2) {
             return callback([]);
         }
 
-        const timer = setTimeout(async () => {
+        if (abortControllerRef.current) {
+            abortControllerRef.current.abort();
+        }
+
+        if (timerRef.current) {
+            clearTimeout(timerRef.current);
+        }
+
+        abortControllerRef.current = new AbortController();
+
+        timerRef.current = setTimeout(async () => {
             try {
-                const data = await getManyAlimentos(inputValue);
+                const data = await getManyAlimentos(inputValue, abortControllerRef.current.signal);
 
                 const formattedData = data.map((item) => ({
                     value: item.id,
@@ -21,11 +34,16 @@ export default function FoodDropdown({ onChange }) {
 
                 callback(formattedData);
             } catch (error) {
-                callback([]);
+                if (error.name !== 'AbortError' && error.name !== 'CanceledError') {
+                    callback([]);
+                }
             }
-        }, 300);
+        }, 500);
 
-        return () => clearTimeout(timer);
+        return () => {
+            clearTimeout(timerRef.current);
+            abortControllerRef.current?.abort();
+        };
     };
 
     return (
